@@ -13,7 +13,7 @@ import java.util.List;
 public class DataReader {
 
     public void getJsonDataToMap() throws IOException {
-        String jsonContent = FileUtils.readFileToString(new File("src/main/resources/globalData.properties"));
+        String jsonContent = FileUtils.readFileToString(new File("src/main/resources/data.properties"));
         ObjectMapper mapper = new ObjectMapper();
         List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {
             @Override

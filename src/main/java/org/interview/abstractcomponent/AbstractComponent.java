@@ -20,8 +20,6 @@ public class AbstractComponent {
         this.driver = driver;
     }
 
-
-
     public void waitElementToAppear(WebElement element) {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9));

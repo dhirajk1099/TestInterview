@@ -60,7 +60,7 @@ public class ContactUsPage extends AbstractComponent {
       firstName.sendKeys("Demo");
       email.sendKeys("abc@gmail.com");
       selectingJobRole();
-      mobileNumber.sendKeys("9877897897");
+      mobileNumber.sendKeys("9004962149");
       organisationName.sendKeys("Amazon");
       radioButton.click();
       submitClick.click();

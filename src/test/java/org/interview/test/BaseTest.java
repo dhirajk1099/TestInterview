@@ -32,7 +32,7 @@ public class BaseTest {
 
     public WebDriver initializeDriver() throws IOException {
         Properties prop = new Properties();
-        FileInputStream fil = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/globalData.properties");
+        FileInputStream fil = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
         prop.load(fil);
         System.out.println(prop.getProperty("browser"));
         String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
@@ -51,16 +51,9 @@ public class BaseTest {
         return driver;
     }
 
-//    @BeforeSuite(alwaysRun = true)
-//    public void setup() {
-//        extentReportImpl = new ExtentReportImpl();
-//        extent = ExtentReportImpl.extentReportConfig();
-//    }
-
     @BeforeClass(alwaysRun = true)
     public HomePage launchApplication() throws IOException {
         driver = initializeDriver();
-//        landingPage = new LandingPage(driver);
         homePage = new HomePage(driver);
         homePage.goTo();
         return new HomePage(driver);

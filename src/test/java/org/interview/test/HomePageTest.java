@@ -20,29 +20,19 @@ public class HomePageTest extends BaseTest {
 
     @Test(priority = 1,enabled = true)
     public void homePage_Verification() throws InterruptedException {
-
         Assert.assertTrue(homePage.isAboutUsVisible());
         storyPage  = homePage.storyClick();
-        Thread.sleep(5000);
         Assert.assertTrue(storyPage.getCurrentUrl().equalsIgnoreCase("https://www.tendable.com/our-story"));
         Assert.assertTrue(homePage.requestDemoPresent());
         Assert.assertTrue(homePage.requestDemoEnabled());
         solutionPage  = homePage.solutionClick();
-       // Thread.sleep(5000);
         Assert.assertTrue(solutionPage.getCurrentUrl().equalsIgnoreCase("https://www.tendable.com/our-solution"));
         Assert.assertTrue(homePage.requestDemoPresent());
         Assert.assertTrue(homePage.requestDemoEnabled());
         tendablePage  = homePage.tendableClick();
-       // Thread.sleep(5000);
         Assert.assertTrue(tendablePage.getCurrentUrl().equalsIgnoreCase("https://www.tendable.com/why-tendable"));
         Assert.assertTrue(homePage.requestDemoPresent());
         Assert.assertTrue(homePage.requestDemoEnabled());
-
-
-
-
-
-
     }
 
     @Test(priority = 2,enabled = true)
